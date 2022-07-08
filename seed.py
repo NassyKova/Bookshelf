@@ -1,4 +1,5 @@
 from book import Book
+from library import Library
 
 def _seed():
     book01 = Book("Jack London", "The Iron Heel", "Political novel")
