@@ -1,4 +1,6 @@
 from book import Book
+from intro import _intro
+from intro import bcolors
 #library - menu
 
 class Library:
@@ -8,7 +10,8 @@ class Library:
         self.books = books
 
     def _print_library(self):
-        print("Nice to see you again!\nThese books you've read so far: ")
+        _intro()
+        print(bcolors.OKBLUE + "Nice to see you again!\nThese books you've read so far: \n" + bcolors.ENDC)
         for item in self.books:
             item._show_book()
         # print(self._seed())

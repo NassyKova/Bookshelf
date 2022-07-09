@@ -2,28 +2,32 @@ from os import system
 from book import Book
 from library import Library
 from seed import _seed
+from intro import _intro
+from intro import bcolors
 
 library = _seed()
 #bookshelf - cafe
 
 #list of options
 def _print_options():
-    print("1. Open the library")
-    print("2. Add a book to the library")
-    print("3. Add a note to the book")
-    print("4. Delethe the book")
-    print("5. Close the library, exit the bookshelf")
-    opt = input("Select your option (1-5): ")
+    _intro()
+    print(bcolors.OKBLUE + "1. Open the library" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "2. Add a book to the library" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "3. Add a note to the book" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "4. Delethe the book" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "5. Close the library, exit the bookshelf" + bcolors.ENDC)
+    opt = input(bcolors.OKBLUE + "Select your option (1-5): " + bcolors.ENDC)
     return opt
 
 
 # adding a book to the library
 def _add_book():
-    author = input("Who is the author?: ")
-    name = input(f"Which book of {author} you want to add?: ")
-    note = input(f"What was the {name} about?: ")
+    _intro()
+    author = input(bcolors.OKBLUE + "Who is the author?: " + bcolors.ENDC)
+    name = input(bcolors.OKBLUE + f"Which book of {author} you want to add?: " + bcolors.ENDC)
+    note = input(bcolors.OKBLUE + f"What was the {name} about?: " + bcolors.ENDC)
     library._add_item(author, name, note)
-    print(f"I've added {name} to your library")
+    print(bcolors.OKBLUE + f"\nI've added {name} to your library" + bcolors.ENDC)
 
 # def _delete_book():
 #     for item in library.books:
@@ -46,10 +50,10 @@ while option != "6":
     elif option == "4":
         delete_book()
     else:
-        print("Invalid option")
+        print(bcolors.FAIL +"\n\nInvalid option" + bcolors.ENDC)
         
-    input("press Enter to continue...")
+    input(bcolors.WARNING + "\n\npress Enter to continue..." + bcolors.ENDC)
     system('clear')
 
-print("Goodbye!") 
+print(bcolors.OKBLUE + "\n\nGoodbye!" + bcolors.ENDC) 
 
