@@ -1,15 +1,19 @@
 from os import system
+from book import Book
+from seed import _seed
 
-library = _seed()
+#bookshelf - cafe
 
 #list of options
 def _print_options():
     print("1. Open the library")
-    print("2. Add book to the library")
-    print("3. Add note to the book")
+    print("2. Add a book to the library")
+    print("3. Add a note to the book")
+    print("4. Delethe the book")
     print("7. Close the library, exit the bookshelf")
     opt = input("Select your option (1-7): ")
     return opt
+
 
 # adding a book to the library
 def _add_book():
@@ -24,23 +28,20 @@ def _add_book():
 
 #     name = input("Which book you want to ")
 
+option = ""
 
 while option != "6":
     system('clear')
     option = _print_options()
     system('clear')
     if option == "1":
-        library.open_library()
+        print("open library")
     elif option == "2":
         add_book()
     elif option == "3":
-        edit_product()
+        add_note()
     elif option == "4":
-        delete_product()
-    elif option == "5":
-        take_order()
-    elif option == "6":
-        continue
+        delete_book()
     else:
         print("Invalid option")
         
