@@ -13,6 +13,12 @@ class Library:
             item._show_book()
         # print(self._seed())
 
+    # add a new book to the library
+    def _add_item(self, author, name, note):
+        new_book = Book(author, name, note)
+        self.books.append(new_book)
+
+
 
 
 
@@ -29,10 +35,7 @@ class Library:
 
 
 
-#     # add a new book to the library
-#     def _add_book(self, author, name, note):
-#         new_book = Book(author, name, note)
-#         self.books.append(new_book)
+
 
 #     def _add_note(self, name, note):
 #         for item in self.books:

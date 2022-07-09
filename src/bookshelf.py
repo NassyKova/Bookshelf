@@ -1,4 +1,3 @@
-from dbm.ndbm import library
 from os import system
 from book import Book
 from library import Library
@@ -22,7 +21,8 @@ def _print_options():
 def _add_book():
     author = input("Who is the author?: ")
     name = input(f"Which book of {author} you want to add?: ")
-    library._add.book(author, name)
+    note = input(f"What was the {name} about?: ")
+    library._add_item(author, name, note)
     print(f"I've added {name} to your library")
 
 # def _delete_book():
