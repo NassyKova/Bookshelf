@@ -12,11 +12,11 @@ library = _seed()
 def _print_options():
     _intro()
     print(bcolors.OKBLUE + "1. Open the library" + bcolors.ENDC)
-    print(bcolors.OKBLUE + "2. Add a book to the library" + bcolors.ENDC)
-    print(bcolors.OKBLUE + "3. Add a note to the book" + bcolors.ENDC)
-    print(bcolors.OKBLUE + "4. Delethe the book" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "2. Open the library with notes" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "3. Add a book to the library" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "4. Delete the book" + bcolors.ENDC)
     print(bcolors.OKBLUE + "5. Close the library, exit the bookshelf" + bcolors.ENDC)
-    opt = input(bcolors.OKBLUE + "Select your option (1-5): " + bcolors.ENDC)
+    opt = input(bcolors.OKBLUE + "Select your option (1-6): " + bcolors.ENDC)
     return opt
 
 
@@ -29,26 +29,30 @@ def _add_book():
     library._add_item(author, name, note)
     print(bcolors.OKBLUE + f"\nI've added {name} to your library" + bcolors.ENDC)
 
-# def _delete_book():
-#     for item in library.books:
-#         print(item.name)
+def _delete_book():
+    for item in library.books:
+        print(item.name)
 
-#     name = input("Which book you want to ")
+    name = input(bcolors.OKBLUE + "Which book you want to delete?: "+ bcolors.ENDC)
+    library._delete_item(name)
+
+
 
 option = ""
 
-while option != "6":
+while option != "5":
     system('clear')
     option = _print_options()
     system('clear')
     if option == "1":
         library._print_library()
-    elif option == "2":
-        _add_book()
+    if option == "2":
+        library._print_library_notes()
     elif option == "3":
-        add_note()
+        _add_book()
     elif option == "4":
-        delete_book()
+        _delete_book()
+
     else:
         print(bcolors.FAIL +"\n\nInvalid option" + bcolors.ENDC)
         

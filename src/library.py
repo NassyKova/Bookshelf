@@ -16,10 +16,28 @@ class Library:
             item._show_book()
         # print(self._seed())
 
+    def _print_library_notes(self):
+        _intro()
+        print(bcolors.OKBLUE + "Nice to see you again!\nThese books you've read so far: \n" + bcolors.ENDC)
+        for item in self.books:
+            item._show_book_notes()
+        # print(self._seed())
+
+
     # add a new book to the library
     def _add_item(self, author, name, note):
         new_book = Book(author, name, note)
         self.books.append(new_book)
+
+#delete the book from the library
+    def _delete_item(self, name):
+        for item in self.books:
+            if item.name == name:
+                self.books.remove(item)
+                return print(bcolors.OKBLUE + f"I've removed {name} from your library \n" + bcolors.ENDC)
+                
+        return print(bcolors.OKBLUE + f"Hm, I couldn't find {name} in your library...\n" + bcolors.ENDC)
+
 
 
 
@@ -48,21 +66,6 @@ class Library:
 #                     print("No notes? Fine by me")
 #                 return print(f"A note for {name} was added")
 #         return print(f"I could not find {name} in your library")
-
-
-#     # delete a book from the library
-#     def _delete_book(self, name):
-#         for item in self.books:
-#             if item.name == name:
-#                 self.books.remove(item)
-#                 return print(f"I removed {name} from you library")
-
-#         return print(f"Mmm, I did not find {name} in your library")
-
-# Library._add_book("Kihih", "IOhioh", "oispfuj")
-# print(library)
-
-    
 
 
 

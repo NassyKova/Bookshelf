@@ -16,6 +16,11 @@ class Book:
         #!!!!!show_item
         print(f"{self.author}, {self.name}")
 
+    #see what is in the library
+    def _show_book_notes(self):
+        #!!!!!show_item
+        print(f"{self.author}, {self.name}, {self.note}")
+
 # test
 # book01 = Book("New_Author", "New_Book", "Note")
 # book01._show_book()
