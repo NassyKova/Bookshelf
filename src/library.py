@@ -38,9 +38,13 @@ class Library:
                 
         return print(bcolors.OKBLUE + f"Hm, I couldn't find {name} in your library...\n" + bcolors.ENDC)
 
-
-
-
+    def _edit_item_note(self, name):
+        for item in self.books:
+            if item.name == name:
+                note = input (bcolors.OKBLUE + f"What is the new description of {name}?: " + bcolors.ENDC)
+                item.note = note
+                return print(bcolors.OKBLUE + f"I've updated the description of {name} \n" + bcolors.ENDC)
+        return print(bcolors.OKBLUE + f"Hm, I couldn't find {name} in your library...\n" + bcolors.ENDC)
 
 
 
