@@ -1,11 +1,9 @@
 from book import Book
-from intro import _intro
-from intro import bcolors
-#library - menu
+from intro import _intro, bcolors
+
 
 class Library:
     # a list of exhisting books
-    #books = menu_items
     def __init__(self, books):
         self.books = books
 
@@ -14,14 +12,12 @@ class Library:
         print(bcolors.OKBLUE + "     Nice to see you again!\n     These books you've read so far: \n" + bcolors.ENDC)
         for item in self.books:
             item._show_book()
-        # print(self._seed())
 
     def _print_library_notes(self):
         _intro()
         print(bcolors.OKBLUE + "     Here a notes for the book you've read: \n" + bcolors.ENDC)
         for item in self.books:
             item._show_book_notes()
-        # print(self._seed())
 
 
     # add a new book to the library
@@ -38,6 +34,7 @@ class Library:
                 
         return print(bcolors.OKBLUE + f"     Hm, I couldn't find {name} in your library...\n" + bcolors.ENDC)
 
+# add/edit note to the book
     def _edit_item_note(self, name):
         for item in self.books:
             if item.name == name:

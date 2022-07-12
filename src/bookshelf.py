@@ -2,8 +2,8 @@ from os import system
 from book import Book
 from library import Library
 from seed import _seed
-from intro import _intro 
-from intro import bcolors
+from intro import _intro, bcolors
+
 
 library = _seed()
 #bookshelf - cafe
@@ -15,7 +15,7 @@ def _print_options():
     print(bcolors.OKBLUE + "     2. Open the library with notes" + bcolors.ENDC)
     print(bcolors.OKBLUE + "     3. Add a book to the library" + bcolors.ENDC)
     print(bcolors.OKBLUE + "     4. Delete the book" + bcolors.ENDC)
-    print(bcolors.OKBLUE + "     5. Edite the note" + bcolors.ENDC)
+    print(bcolors.OKBLUE + "     5. Add/edite note for a book" + bcolors.ENDC)
     print(bcolors.OKBLUE + "     6. Close the library, exit the bookshelf" + bcolors.ENDC)
     opt = input(bcolors.OKBLUE + "     Choose what do you want to do (1-6): " + bcolors.ENDC)
     return opt
