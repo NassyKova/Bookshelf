@@ -1,5 +1,6 @@
 from book import Book
 from intro import intro, bcolors
+from error import no_such_book, type_something
 
 
 class Library:
@@ -9,7 +10,7 @@ class Library:
 
     def print_library(self):
         intro()
-        print(bcolors.OKBLUE + "     Nice to see you again!\n     These books you've read so far: \n" + bcolors.ENDC)
+        print(bcolors.OKBLUE + "\n     These books you've read so far: \n" + bcolors.ENDC)
         for item in self.books:
             item.show_book()
 
@@ -31,8 +32,7 @@ class Library:
             if item.name == name:
                 self.books.remove(item)
                 return print(bcolors.OKBLUE + f"     I've removed {name} from your library \n" + bcolors.ENDC)
-                
-        return print(bcolors.OKBLUE + f"     Hm, I couldn't find {name} in your library...\n" + bcolors.ENDC)
+        no_such_book()
 
 # add/edit note to the book
     def edit_item_note(self, name):
@@ -40,8 +40,8 @@ class Library:
             if item.name == name:
                 note = input (bcolors.OKBLUE + f"     What is the new description of {name}?: " + bcolors.ENDC)
                 if note == "":
-                    return print(bcolors.OKBLUE + f"     You better type something next time\n" + bcolors.ENDC)
+                    type_something()
                 item.note = note
                 return print(bcolors.OKBLUE + f"     I've updated the description of {name} \n" + bcolors.ENDC)
-        return print(bcolors.OKBLUE + f"     Hm, I couldn't find {name} in your library...\n" + bcolors.ENDC)
+        no_such_book()
 

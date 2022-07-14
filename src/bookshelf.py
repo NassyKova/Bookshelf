@@ -3,7 +3,7 @@ from book import Book
 from library import Library
 from seed import seed
 from intro import intro, bcolors
-
+from error import type_something
 
 library = seed()
 #bookshelf - cafe
@@ -26,10 +26,10 @@ def add_book():
     intro()
     author = input(bcolors.OKBLUE + "     Who is the author?: " + bcolors.ENDC)
     if author == "":
-        return print(bcolors.OKBLUE + f"     You better type something next time\n" + bcolors.ENDC)
+        type_something()
     name = input(bcolors.OKBLUE + f"     Which book of {author} you want to add?: " + bcolors.ENDC)
     if name == "":
-        return print(bcolors.OKBLUE + f"     You better type something next time\n" + bcolors.ENDC)
+        type_something()
     note = input(bcolors.OKBLUE + f"     What was {name} about?: " + bcolors.ENDC)
     library.add_item(author, name, note)
     print(bcolors.OKBLUE + f"\n     I've added {name} to your library" + bcolors.ENDC)
@@ -43,7 +43,7 @@ def delete_book():
     name = input(bcolors.OKBLUE + "\n\n     Which book you want to delete?: \n\n"+ bcolors.ENDC)
     # if input is None:
     if name == "":
-        return print(bcolors.OKBLUE + f"     You better type something next time\n" + bcolors.ENDC)
+        type_something()
 
     library.delete_item(name)
 
@@ -55,7 +55,7 @@ def edit_note():
 
     name = input(bcolors.OKBLUE + "\n\n     You want to add or edit a note to wich book?: \n\n"+ bcolors.ENDC)
     if name == "":
-        return print(bcolors.OKBLUE + f"     You better type something next time\n" + bcolors.ENDC)
+        type_something()
     library.edit_item_note(name)
 
 

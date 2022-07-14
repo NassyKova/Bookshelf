@@ -43,12 +43,26 @@ Two manual tests had been performed, they can be found [here](docs/Manual_Test.x
 First test was design to test the start menu
 Second test was designed to test feature "add the book"
 
+## Error handling
+For adding a new book and an author, if any of inputs is empty, the app will respond
+```python
+    if name == "":
+        return print("You better type something next time")
+```
+
+##  Developer tools to facilitate the execution of the application
+Trello board in the beginning
+
+![Trello board in the beginning](docs/Trello_start.png)
+Trello Board closer to the end
+
+![!Trello Board closer to the end](docs/Trello_Med.png)
+
+
+## Flow Chart
+![Flow Chart](docs/Bookshelf.png)
+
+
 ## Challenges
 Due to the timelimit, have been decided to cut out the feature "Wish List".
 Adding the colors expected to be a difficlut task, but ended up being done
-
-##  developer tools to facilitate the execution of the application
-!!!Trello board
-
-## Control Flow
-!!!
