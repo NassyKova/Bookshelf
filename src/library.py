@@ -46,16 +46,6 @@ class Library:
                 if note == "":
                     error_type_smth()
                     return ""
-            
                 return print(bcolors.OKBLUE + f"     I've updated the description of {name} \n" + bcolors.ENDC)
         error_no_find()
         return ""
-
-    # def update_price(self, name):
-    #     for item in self.menu_items:
-    #         if item.name == name:
-    #             price = float(input(f"What is the new price for {name}? "))
-    #             item.price = price
-    #             return print(f"{name}'s price was uptaded in the menu")
-    
-    #     return  print(f"{name} is not in the menu")   
