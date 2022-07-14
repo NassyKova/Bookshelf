@@ -41,14 +41,15 @@ For any reason, the book can be deleted from the library using option "4" in the
 ## Testing
 Two manual tests had been performed, they can be found [here](docs/Manual_Test.xlsx).
 First test was design to test the start menu
-Second test was designed to test feature "add the book"
+Second test was designed to test feature "add the book". This test was done twice, when the new error responds was added to the code
 
 ## Error handling
-For adding a new book and an author, if any of inputs is empty, the app will respond
-```python
-    if name == "":
-        return print("You better type something next time")
-```
+For adding a new book and an author, if any of inputs is empty, the app will run function `type_something()` from error.py
+
+For deleting the book, or adding a note to the book, if book is not found, the app will run fucntion `no_such_book()` from error.py
+
+For start menu, if input will not be in a range 1-6, the app wil responds:
+`print(No such option, try again")`
 
 ##  Developer tools to facilitate the execution of the application
 Trello board in the beginning
@@ -64,5 +65,5 @@ Trello Board closer to the end
 
 
 ## Challenges
-Due to the timelimit, have been decided to cut out the feature "Wish List".
+Due to the timelimit, have been decided to cut the feature "Wish List" out.
 Adding the colors expected to be a difficlut task, but ended up being done
