@@ -1,0 +1,22 @@
+Bookshelf
+
+Bookshelf is an app that let add books you read and add notes to the books.
+
+Python 3.8.10
+
+Clone this repo to your local machine: $ clone https://github.com/purplebus/Bookshelf.git
+
+Move to code folder cd src
+
+Run the script $ ./run_bookshelf.sh
+
+To run the app use python3 bookshelf.py
+
+
+Bookshelf offers 6 options:
+Option 1 - open the library, author and a book's name
+Option 2 - open the library with notes - authir, a book's name and a note
+Option 3 - Add a book to the library. Author and book's name are mandatory to fill, the note is optional
+Option 4 - Delete the book from the library
+Option 5 - Add/edit a note 
+Option 6 - exit the app

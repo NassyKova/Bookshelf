@@ -2,7 +2,7 @@
 
 Bookshelf is an app that let add books you read and add notes to the books.
 
-## System Requrements
+## System Requirements
 Bookshelf uses Python 3.8.10
 
 ## Installation and Execution
@@ -30,23 +30,24 @@ These days I mostly read books on Kindle. With time I realized tat I can't remem
 ## Features
 
 ### Library
-Bookshelf has a library with some books I have already read. It usues `Class Book` with values for Author's name, Book's name and a note for the book. Library using method `_print_library` to list the books that are in the library. From the main menu option "1" will show the library with Authors and Book's names. Option "2" will show notes as well as othet information.
+Bookshelf has a library with some books I have already read. It usues `Class Book` with values for Author's name, Book's name and a note for the book. Library using method `print_library` to list the books that are in the library. From the main menu option "1" will show the library with Authors and Book's names. Option "2" will show notes as well as othet information.
 
 ### Add a book to the library
-A book can be added via main menu using option "3". The app will ask to add Author's name and a book's name. If the input will be empty (No imput), the app will inform about it and return to the main menu. Note can be added when adding the book or later using option "5' in the main menu. Method `_add_item` and `_edit_item_note` are used.
+A book can be added via main menu using option "3". The app will ask to add Author's name and a book's name. If the input will be empty (No imput), the app will inform about it and return to the main menu. Note can be added when adding the book or later using option "5' in the main menu. Method `add_item` and `edit_item_note` are used.
 
 ### Delete the book
-For any reason, the book can be deleted from the library using option "4" in the main menu and method `_delete_item`
+For any reason, the book can be deleted from the library using option "4" in the main menu and method `delete_item`
 
 ## Testing
 Two manual tests had been performed, they can be found [here](docs/Manual_Test.xlsx).
-First test was design to test the start menu
+First test was design to test the start menu.
+
 Second test was designed to test feature "add the book". This test was done twice, when the new error responds was added to the code
 
 ## Error handling
-For adding a new book and an author, if any of inputs is empty, the app will run function `type_something()` from error.py
+For adding a new book and an author, if any of inputs is empty, the app will run function `error_type_smth` from error.py
 
-For deleting the book, or adding a note to the book, if book is not found, the app will run fucntion `no_such_book()` from error.py
+For deleting the book, or adding a note to the book, if book is not found, the app will run fucntion `error_no_find` from error.py
 
 For start menu, if input will not be in a range 1-6, the app wil responds:
 `print(No such option, try again")`
@@ -66,4 +67,5 @@ Trello Board closer to the end
 
 ## Challenges
 Due to the timelimit, have been decided to cut the feature "Wish List" out.
+
 Adding the colors expected to be a difficlut task, but ended up being done

@@ -8,12 +8,14 @@ class Library:
     def __init__(self, books):
         self.books = books
 
+# print library: author, book
     def print_library(self):
         intro()
-        print(bcolors.OKBLUE + "     Nice to see you again!\n     These books you've read so far: \n" + bcolors.ENDC)
+        print(bcolors.OKBLUE + "     These books you've read so far: \n" + bcolors.ENDC)
         for item in self.books:
             item.show_book()
 
+#pint library: author, book, note
     def print_library_notes(self):
         intro()
         print(bcolors.OKBLUE + "     Here a notes for the book you've read: \n" + bcolors.ENDC)

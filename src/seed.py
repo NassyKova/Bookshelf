@@ -9,5 +9,3 @@ def seed():
 
     library = Library([book01, book02, book03, book04])
     return library
-
-print(seed())

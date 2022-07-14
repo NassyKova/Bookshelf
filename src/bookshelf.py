@@ -7,7 +7,7 @@ from error import error_type_smth
 
 
 library = seed()
-#bookshelf - cafe
+
 
 #list of options
 def print_options():
@@ -26,14 +26,16 @@ def print_options():
 def add_book():
     intro()
     author = input(bcolors.OKBLUE + "     Who is the author?: " + bcolors.ENDC)
+        # if input is None:
     if author == "":
         error_type_smth()
         return ""
     name = input(bcolors.OKBLUE + f"     Which book of {author} you want to add?: " + bcolors.ENDC)
+        # if input is None:
     if name == "":
         error_type_smth()
         return ""
-    note = input(bcolors.OKBLUE + f"     What was {name} about?: " + bcolors.ENDC)
+    note = input(bcolors.OKBLUE + f"     What was {name} about? (Leave it blank if you want to add it later): " + bcolors.ENDC)
     library.add_item(author, name, note)
     print(bcolors.OKBLUE + f"\n     I've added {name} to your library" + bcolors.ENDC)
 
@@ -89,6 +91,7 @@ while option != "6":
     input(bcolors.WARNING + "     \n\npress Enter to continue...\n\n" + bcolors.ENDC)
     system('clear')
 
+#option 6, goodbye
 intro()
 print(bcolors.OKBLUE + "     \n\nGoodbye!\n\n" + bcolors.ENDC) 
 
