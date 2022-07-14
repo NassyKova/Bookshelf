@@ -48,6 +48,7 @@ def delete_book():
     # if input is None:
     if name == "":
         error_type_smth()
+        return ""
     library.delete_item(name)
 
 # edit a book and the elements using method edit_item

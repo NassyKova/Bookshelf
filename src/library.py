@@ -35,18 +35,27 @@ class Library:
                 self.books.remove(item)
                 return print(bcolors.OKBLUE + f"     I've removed {name} from your library \n" + bcolors.ENDC)    
         error_no_find()
-        return ""
+
 
 # add/edit note to the book
     def edit_item_note(self, name):
         for item in self.books:
             if item.name == name:
-                note = input (bcolors.OKBLUE + f"     What is the new description of {name}?: " + bcolors.ENDC)
+                note = input(bcolors.OKBLUE + f"     What is the new description of {name}?: " + bcolors.ENDC)
+                item.note = note
                 if note == "":
                     error_type_smth()
                     return ""
-            item.note = note
-            return print(bcolors.OKBLUE + f"     I've updated the description of {name} \n" + bcolors.ENDC)
+            
+                return print(bcolors.OKBLUE + f"     I've updated the description of {name} \n" + bcolors.ENDC)
         error_no_find()
         return ""
 
+    # def update_price(self, name):
+    #     for item in self.menu_items:
+    #         if item.name == name:
+    #             price = float(input(f"What is the new price for {name}? "))
+    #             item.price = price
+    #             return print(f"{name}'s price was uptaded in the menu")
+    
+    #     return  print(f"{name} is not in the menu")   
