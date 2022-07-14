@@ -24,8 +24,8 @@ To run the app use
 `python3 bookshelf.py`
 
 ## Idea
-Since I was little, I was reading books non-stop. Books became my oasis, my friends, my escape. My library was taken up all bookshelfs at my parent's place. Wjen I moved to Australia, I brought about 30 books with me, because you can't let friends go! 
-These days I mostly read books on Kindle. With time I realized tat I can't remember what was the book about based only on the name of the book. I tried to use a book diery, a book Instagramm page, nothing worked. With this app, I can add the books I've read and add a note that will help me to remember what was the book about.
+Since I was little, I was reading books non-stop. Books became my oasis, my friends, my escape. My library was taken up all bookshelf at my parent's place. When I moved to Australia, I brought about 30 books with me, because you can't let friends go! 
+These days I mostly read books on Kindle. With time I realized tat I can't remember what was the book about based only on the name of the book. I tried to use a book diary, a book Instagram page, nothing worked. With this app, I can add the books I've read and add a note that will help me to remember what was the book about.
 
 ## Features
 
@@ -55,14 +55,14 @@ For start menu, if input will not be in a range 1-6, the app wil responds:
 ##  Developer tools to facilitate the execution of the application
 Trello board in the beginning
 
-![Trello board in the beginning](docs/Trello_start.png)
+![Trello board in the beginning](docs/pics/Trello_start.png)
 Trello Board closer to the end
 
-![!Trello Board closer to the end](docs/Trello_Med.png)
+![!Trello Board closer to the end](docs/pics/Trello_Med.png)
 
 
 ## Flow Chart
-![Flow Chart](docs/Bookshelf.png)
+![Flow Chart](docs/pics/Bookshelf.png)
 
 
 ## Challenges

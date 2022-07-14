@@ -44,13 +44,10 @@ def delete_book():
     intro()
     for item in library.books:
         print(item.name)
-
     name = input(bcolors.OKBLUE + "\n\n     Which book you want to delete?: \n\n"+ bcolors.ENDC)
     # if input is None:
     if name == "":
         error_type_smth()
-        return ""
-
     library.delete_item(name)
 
 # edit a book and the elements using method edit_item
@@ -61,7 +58,8 @@ def edit_note():
 
     name = input(bcolors.OKBLUE + "\n\n     You want to add or edit a note to wich book?: \n\n"+ bcolors.ENDC)
     if name == "":
-        return print(bcolors.OKBLUE + f"     You better type something next time\n" + bcolors.ENDC)
+        error_type_smth()
+        return ""
     library.edit_item_note(name)
 
 

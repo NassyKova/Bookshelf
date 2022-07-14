@@ -34,8 +34,8 @@ class Library:
             if item.name == name:
                 self.books.remove(item)
                 return print(bcolors.OKBLUE + f"     I've removed {name} from your library \n" + bcolors.ENDC)    
-            error_no_find()
-            return ""
+        error_no_find()
+        return ""
 
 # add/edit note to the book
     def edit_item_note(self, name):
@@ -45,8 +45,8 @@ class Library:
                 if note == "":
                     error_type_smth()
                     return ""
-                item.note = note
-                return print(bcolors.OKBLUE + f"     I've updated the description of {name} \n" + bcolors.ENDC)
+            item.note = note
+            return print(bcolors.OKBLUE + f"     I've updated the description of {name} \n" + bcolors.ENDC)
         error_no_find()
         return ""
 
