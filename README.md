@@ -16,6 +16,9 @@ Move to code folder
 
 `cd src`
 
+To read the help file use
+`./run_bookshelf.sh help`
+
 Run the script
 
 `./run_bookshelf.sh`
