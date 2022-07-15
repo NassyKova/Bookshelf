@@ -1,4 +1,4 @@
-# Bookshelf, a place to store memories about the books
+# Bookshelf, a place to store notes about the books
 
 Bookshelf is an app that let add books you read and add notes to the books.
 ![Bookshelf interface](docs/pics/bookshelf_interface.png)
@@ -53,14 +53,15 @@ For deleting the book, or adding a note to the book, if book is not found, the a
 For start menu, if input will not be in a range 1-6, the app wil responds:
 `print(No such option, try again")`
 
-##  Developer tools to facilitate the execution of the application
-Trello board in the beginning
-
-![Trello board in the beginning](docs/pics/Trello_start.png)
-Trello Board closer to the end
-
-![!Trello Board closer to the end](docs/pics/Trello_Med.png)
-
-
 ## Flow Chart
 ![Flow Chart](docs/pics/Bookshelf.png)
+
+##  Developer tools to facilitate the execution of the application
+Trello board in the beginning
+![Trello board in the beginning](docs/pics/trello_start.png)
+
+Trello Board closer to the end
+![!Trello Board closer to the end](docs/pics/trello_Med.png)
+
+Trello Board in the end
+![!Trello Board in the end end](docs/pics/trello_end.png)

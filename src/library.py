@@ -34,6 +34,7 @@ class Library:
             if item.name == name:
                 self.books.remove(item)
                 return print(bcolors.OKBLUE + f"     I've removed {name} from your library \n" + bcolors.ENDC)    
+    # if book is not found in the list:
         error_no_find()
 
 
@@ -47,5 +48,6 @@ class Library:
                     error_type_smth()
                     return ""
                 return print(bcolors.OKBLUE + f"     I've updated the description of {name} \n" + bcolors.ENDC)
+    # if book is not found in the list:
         error_no_find()
         return ""

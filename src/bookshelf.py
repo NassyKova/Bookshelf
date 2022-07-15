@@ -56,6 +56,7 @@ def edit_note():
         print(item.name)
 
     name = input(bcolors.OKBLUE + "\n\n     You want to add or edit a note to wich book?: \n\n"+ bcolors.ENDC)
+    # if input is None:
     if name == "":
         error_type_smth()
         return ""
