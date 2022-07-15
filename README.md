@@ -1,6 +1,7 @@
 # Bookshelf, a place to store memories about the books
 
 Bookshelf is an app that let add books you read and add notes to the books.
+![Bookshelf interface](docs/pics/bookshelf_interface.png)
 
 ## System Requirements
 Bookshelf uses Python 3.8.10
@@ -63,9 +64,3 @@ Trello Board closer to the end
 
 ## Flow Chart
 ![Flow Chart](docs/pics/Bookshelf.png)
-
-
-## Challenges
-Due to the time limit, have been decided to cut the feature "Wish List" out.
-
-Adding the colors expected to be a difficult task, but ended up being done

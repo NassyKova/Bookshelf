@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 bookshelf.py $1
+check_python.sh script
+python3 bookshelf.py
