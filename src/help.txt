@@ -1,8 +1,9 @@
 Bookshelf
 
-Bookshelf is an app that let add books you read and add notes to the books.
+Bookshelf is an app that let you add the books you've read and add notes to those books.
 
-Python 3.8.10
+Build in Python 3.8.10
+
 
 Clone this repo to your local machine: $ clone https://github.com/purplebus/Bookshelf.git
 
